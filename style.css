@@ -7,7 +7,7 @@
 .header {
     height: 100vh;
     min-height: 500px;
-    background:linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('media/header2.png');
+    background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('media/header2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +15,9 @@
   }
 .header::after{
     position: absolute;
-    content: "Verholy Relax Park";
+    content: "Vetrina Carousel fullBg";
     top: 10%;
-    left: 45%;
+    left: 35%;
     color: var(--accent);
     font-size: 50px;
 }
@@ -50,7 +50,7 @@
 
    body,html{
     overflow:hidden;
-    height:100%;    
+    /* height:100%;   */  
   } 
   #wrap{
     position:absolute;
@@ -74,6 +74,7 @@
     position:relative;
     display:block;
     max-width:90%;
+    
   }
   .c img {
     position:relative;
@@ -162,8 +163,52 @@
         font-weight:700;
         text-transform:uppercase;
       }
+      .header::after{
+        position: absolute;
+        content: "Vetrina Carousel fullBg";
+        top: 10%;
+        left: 20%;
+        color: var(--accent);
+        font-size: 25px;
+    }
   }
 
   p{
       color: var(--main);
   }
+
+  .btn-accent{
+    background: 
+    linear-gradient(to right, var(--accent) 2px, transparent 2px) 0 0,
+    linear-gradient(to right, var(--accent) 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, var(--accent) 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, var(--accent) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, var(--accent) 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, var(--accent) 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, var(--accent) 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, var(--accent) 2px, transparent 2px) 100% 100%
+    ;
+
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    transition: 0.4s;
+  }
+
+  .btn-accent:hover{
+    letter-spacing: 4px;
+}
+
+.leaves{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('media/leaves2.png');
+  animation: animate 60s linear infinite;
+}
+
+@keyframes animate{
+  from{background-position: 0px;}
+  to{background-position: -5440px;}
+}
